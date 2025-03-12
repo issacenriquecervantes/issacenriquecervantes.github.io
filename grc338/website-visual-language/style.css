@@ -11,11 +11,11 @@ html,body,div,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acr
 
 body {
 	font-family: basic-sans, sans-serif;
-	background-color: rgb(60, 60, 60);
+	background-color: rgb(55, 75, 80);
 }
 
 div.container {
-	background-color: rgb(225, 225, 235);
+	background-color: rgb(180, 215, 230);
 }
 
 div.home-container,
@@ -45,7 +45,7 @@ img {
 	width: 100%;
 	/*Please leave this line.*/
 	display: block;
-	border: solid 1px rgb(185, 185, 200);
+	border: solid 1px rgb(55, 75, 80);
 }
 
 h1 a img {
@@ -75,6 +75,8 @@ h2 {
 	font-size: 1.8em;
 	margin: 1em 0 0.25em;
 	text-transform: uppercase;
+	font-family: rl-aqva;
+	letter-spacing: 0.1em;
 }
 
 h3 {
@@ -100,7 +102,7 @@ nav ul li a {
 }
 
 nav ul li.selected a {
-	border-bottom: solid 2px rgb(185, 185, 200);
+	border-bottom: solid 2px rgb(55, 75, 80);
 }
 
 main {
@@ -168,14 +170,14 @@ footer {
 	height: 3rem;
 	box-sizing: border-box;
 	padding: 1em 0.75rem;
-	background: rgb(185, 185, 200);
+	background: rgb(115, 175, 185);
 }
 
 footer p {
 	margin: 0;
 }
 
-@media screen and (min-width: 60em) {
+@media screen and (min-width: 70em) {
 	nav {
 		margin: auto 0;
 	}
