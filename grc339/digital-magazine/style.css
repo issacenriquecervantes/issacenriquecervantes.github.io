@@ -1,0 +1,138 @@
+/* CSS Document */
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+}
+
+div.container {
+    max-width: 40em;
+    margin: auto;
+}
+
+/* Header */
+header {
+    padding: 1rem 0.5rem;
+}
+
+h1 {
+    max-width: 7em;
+    margin-bottom: 0.75rem;
+}
+
+/* Navigation */
+nav li {
+    list-style-type: none;
+    margin-top: 0.25rem;
+}
+
+nav a {
+    font-family: sans-serif;
+    font-weight: bold;
+    color: rgb(85, 119, 153);
+}
+
+/* Type */
+
+h2 {
+    font-family: serif;
+    font-weight: bold;
+    color: rgb(85, 119, 153);
+    margin-top: 0.25rem;
+}
+
+p {
+    font-family: sans-serif;
+}
+
+figcaption, h2, p {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    font-style: italic;
+    font-family: sans-serif;
+    color: rgb(85, 85, 85);
+}
+
+section p, article p {
+    margin-bottom: 1.25em;
+    line-height: 1.25em;
+}
+
+section a {
+    color: black;
+}
+
+/* Story Teasers and Articles */
+.main-story-teaser h2,
+article h2 {
+    font-size: 2.5em;
+}
+
+article h2 {
+    margin-top: 2rem;
+}
+
+.secondary-story-teaser h2 {
+    font-size: 2em;
+}
+
+aside .secondary-story-teaser h2 {
+    font-size: 1.25rem;
+}
+
+.tertiary-story-teaser h2 {
+    font-size: 1.25em;
+    border-top: solid 1px rgb(85, 119, 153);
+    padding-top: 0.5rem;
+}
+
+aside {
+    background-color: rgb(203, 207, 255);
+    padding: 0.5rem;
+}
+
+footer {
+    padding: 1rem 0.5rem;
+    background-color: rgb(85, 119, 153);
+    color: white;
+}
+
+@media (min-width: 40em) {
+
+    /* removes edge padding set for mobile */
+    /* makes nav links inline blocks */
+
+    header {
+        padding: 1rem 0;
+    }
+
+    nav li {
+        display: inline-block;
+        margin-right: 0.75rem;
+    }
+
+    figcaption, h2, p {
+        margin-left: 0;
+        margin-right: 0;
+    }
+}
