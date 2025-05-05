@@ -20,7 +20,7 @@ a {
     text-decoration: none;
 }
 
-div.container {
+div.container, div.home-container {
     max-width: 40em;
     margin: auto;
 }
@@ -79,7 +79,7 @@ section p, article p {
 }
 
 section a {
-    color: black;
+    color: rgb(0, 0, 0);
 }
 
 /* Story Teasers and Articles */
@@ -114,7 +114,7 @@ aside {
 footer {
     padding: 1rem 0.5rem;
     background-color: rgb(85, 119, 153);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 @media (min-width: 40em) {
@@ -135,4 +135,83 @@ footer {
         margin-left: 0;
         margin-right: 0;
     }
+}
+
+
+@media (min-width: 60em) {
+
+    div.home-container, div.container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        padding: 0 1em;
+        grid-gap: 1em;
+    }
+
+    div.home-container {
+        max-width: 80em;
+    }
+
+    div.container {
+        max-width: 60em;
+    }
+
+    header, footer {
+        grid-column: 1/3;
+    }
+
+    div.home-container main {
+        grid-column: 1/2;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1em;
+    }
+
+    div.home-container aside {
+        background: none;
+        padding: 0;
+    }
+
+    div.home-container aside,
+    div.container aside {
+        margin-top: 0;
+    }
+
+    section.main-story-teaser,
+    section.secondary-story-teaser {
+        display: grid;
+    }
+
+    section.main-story-teaser {
+        grid-column: 2/4;
+        grid-row: 1/3;
+    }
+
+    section.main-story-teaser a,
+    section.secondary-story-teaser a {
+        display: flex;
+        flex-direction: column;
+        flex: 1 0 ;
+    }
+
+    section.main-story-teaser figure,
+    section.main-story-teaser figure {
+        display: flex;
+        flex: 1 0 12em;
+    }
+
+    section.main-story-teaser figure img,
+    section.secondary-story-teaser figure img {
+        object-fit: cover;
+    }
+
+    section.main-story-teaser figure h2,
+    section.secondary-story-teaser figure h2 {
+        flex: 1 0 1em;
+    }
+
+    section.main-story-teaser figure p,
+    section.secondary-story-teaser figure p {
+        flex: 1 0 4em;
+    }
+
 }
