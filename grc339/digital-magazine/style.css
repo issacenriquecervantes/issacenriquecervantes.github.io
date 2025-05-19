@@ -1,4 +1,6 @@
 /* CSS Document */
+@import url("https://use.typekit.net/yev2nzv.css");
+
 *, *::before, *::after {
     box-sizing: border-box;
 }
@@ -11,9 +13,21 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
     font: inherit;
 }
 
+body {
+    background-color: rgb(245, 245, 235);
+}
+
 img {
     width: 100%;
     display: block;
+}
+
+b {
+    font-weight: bold;
+}
+
+i {
+    font-style: italic;
 }
 
 a {
@@ -27,55 +41,64 @@ div.container, div.home-container {
 
 /* Header */
 header {
-    padding: 1rem 0.5rem;
+    padding: 2rem 1rem;
 }
 
 h1 {
-    max-width: 7em;
-    margin-bottom: 0.75rem;
+    max-width: 15em;
+    margin-bottom: 2rem;
 }
+
 
 /* Navigation */
 nav li {
     list-style-type: none;
-    margin-top: 0.25rem;
+    margin-top: 0.5rem;
 }
 
+
 nav a {
-    font-family: sans-serif;
+    font-family: soleil, sans-serif;
     font-weight: bold;
-    color: rgb(85, 119, 153);
+    color: rgb(35, 45, 35);
+}
+
+nav a:hover {
+    border-bottom: solid 2px rgb(220, 150, 45);
+
 }
 
 /* Type */
 
 h2 {
-    font-family: serif;
-    font-weight: bold;
-    color: rgb(85, 119, 153);
+    font-family: lust-text, serif;
+    font-weight: 500;
+    color: rgb(35, 45, 35);
+    line-height: 1.1em;
     margin-top: 0.25rem;
 }
 
 p {
-    font-family: sans-serif;
+    font-family: soleil, sans-serif;
 }
 
 figcaption, h2, p {
-    margin-left: 0.5rem;
-    margin-right: 0.5rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
 figcaption {
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 1.5rem;
     font-style: italic;
-    font-family: sans-serif;
-    color: rgb(85, 85, 85);
+    font-weight: 300;
+    font-family: soleil, sans-serif;
+    color: rgb(65, 60, 55);
 }
 
 section p, article p {
-    margin-bottom: 1.25em;
-    line-height: 1.25em;
+    margin-bottom: 1.5em;
+    line-height: 1.4em;
 }
 
 section a {
@@ -88,8 +111,14 @@ article h2 {
     font-size: 2.5em;
 }
 
+.main-story-teaser h2, .secondary-story-teaser h2 {
+    margin-top: 0.25em;
+    margin-bottom: 0.125em;
+}
+
 article h2 {
     margin-top: 2rem;
+    margin-bottom: 1rem;
 }
 
 .secondary-story-teaser h2 {
@@ -98,23 +127,30 @@ article h2 {
 
 aside .secondary-story-teaser h2 {
     font-size: 1.25rem;
+    margin-top: 0.5rem;
 }
 
 .tertiary-story-teaser h2 {
     font-size: 1.25em;
-    border-top: solid 1px rgb(85, 119, 153);
+    border-top: solid 1px rgb(65, 60, 55);
     padding-top: 0.5rem;
 }
 
 aside {
-    background-color: rgb(203, 207, 255);
-    padding: 0.5rem;
+    background-color:rgb(205, 200, 185);
+    padding: 1rem;
 }
+
+aside figcaption, aside h2, aside p {
+    margin-left: 0;
+    margin-right: 0;
+}
+
 
 footer {
     padding: 1rem 0.5rem;
-    background-color: rgb(85, 119, 153);
-    color: rgb(255, 255, 255);
+    background-color: rgb(65, 60, 55);
+    color: rgb(205, 200, 185);
 }
 
 @media (min-width: 40em) {
@@ -123,12 +159,12 @@ footer {
     /* makes nav links inline blocks */
 
     header {
-        padding: 1rem 0;
+        padding: 2rem 0;
     }
 
     nav li {
         display: inline-block;
-        margin-right: 0.75rem;
+        margin-right: 2rem;
     }
 
     figcaption, h2, p {
@@ -176,8 +212,7 @@ footer {
         margin-top: 0;
     }
 
-    section.main-story-teaser,
-    section.secondary-story-teaser {
+    section.main-story-teaser{
         display: grid;
     }
 
@@ -186,15 +221,13 @@ footer {
         grid-row: 1/3;
     }
 
-    section.main-story-teaser a,
-    section.secondary-story-teaser a {
+    section.main-story-teaser a {
         display: flex;
         flex-direction: column;
         flex: 1 0 ;
     }
 
-    section.main-story-teaser figure,
-    section.main-story-teaser figure {
+    section.main-story-teaser figure{
         display: flex;
         flex: 1 0 12em;
     }
@@ -204,14 +237,16 @@ footer {
         object-fit: cover;
     }
 
-    section.main-story-teaser figure h2,
-    section.secondary-story-teaser figure h2 {
+    section.main-story-teaser figure h2 {
         flex: 1 0 1em;
     }
 
-    section.main-story-teaser figure p,
-    section.secondary-story-teaser figure p {
+    section.main-story-teaser figure p {
         flex: 1 0 4em;
+    }
+
+    .tertiary-story-teaser h2 {
+    border-top: solid 1px rgb(220, 150, 45);
     }
 
 }
