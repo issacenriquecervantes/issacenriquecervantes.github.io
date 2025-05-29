@@ -1,7 +1,9 @@
 /* CSS Document */
 @import url("https://use.typekit.net/yev2nzv.css");
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
 
@@ -34,7 +36,8 @@ a {
     text-decoration: none;
 }
 
-div.container, div.home-container {
+div.container,
+div.home-container {
     max-width: 40em;
     margin: auto;
 }
@@ -76,13 +79,17 @@ h2 {
     color: rgb(35, 45, 35);
     line-height: 1.1em;
     margin-top: 0.25rem;
+    font-size: 1.5em;
+    padding-bottom: 0.25em;
 }
 
 p {
     font-family: soleil, sans-serif;
 }
 
-figcaption, h2, p {
+figcaption,
+h2,
+p {
     margin-left: 1rem;
     margin-right: 1rem;
 }
@@ -96,7 +103,8 @@ figcaption {
     color: rgb(65, 60, 55);
 }
 
-section p, article p {
+section p,
+article p {
     margin-bottom: 1.5em;
     line-height: 1.4em;
 }
@@ -111,7 +119,8 @@ article h2 {
     font-size: 2.5em;
 }
 
-.main-story-teaser h2, .secondary-story-teaser h2 {
+.main-story-teaser h2,
+.secondary-story-teaser h2 {
     margin-top: 0.25em;
     margin-bottom: 0.125em;
 }
@@ -137,15 +146,105 @@ aside .secondary-story-teaser h2 {
 }
 
 aside {
-    background-color:rgb(205, 200, 185);
+    background-color: rgb(205, 200, 185);
     padding: 1rem;
 }
 
-aside figcaption, aside h2, aside p {
+aside figcaption,
+aside h2,
+aside p {
     margin-left: 0;
     margin-right: 0;
 }
 
+#gallery {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: calc(61.25% + 5em);
+}
+
+#gallery figure {
+    margin: 0;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+#gallery-main input:nth-of-type(1):checked~#gallery figure:nth-of-type(1),
+#gallery-main input:nth-of-type(2):checked~#gallery figure:nth-of-type(2),
+#gallery-main input:nth-of-type(3):checked~#gallery figure:nth-of-type(3),
+#gallery-main input:nth-of-type(4):checked~#gallery figure:nth-of-type(4),
+#gallery-main input:nth-of-type(5):checked~#gallery figure:nth-of-type(5),
+#gallery-main input:nth-of-type(6):checked~#gallery figure:nth-of-type(6),
+#gallery-main input:nth-of-type(7):checked~#gallery figure:nth-of-type(7),
+#gallery-main input:nth-of-type(8):checked~#gallery figure:nth-of-type(8) {
+    opacity: 1;
+}
+
+#gallery-nav {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 0.2em;
+    margin-bottom: 2rem;
+}
+
+#gallery-main input {
+    display: none;
+}
+
+#newsletter-image {
+    margin-bottom: 1rem;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem 2rem 1rem;
+    font-family: soleil, sans-serif;
+    color: rgb(35, 45, 35);
+}
+
+form label,
+form legend {
+    margin-bottom: 0.125rem;
+    width: max-content;
+}
+
+form input,
+form select {
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: 1px solid rgb(35, 45, 35);
+    font-family: inherit;
+    color: inherit;
+}
+
+form input:focus,
+form select:focus {
+    border: 2px solid rgb(220, 150, 45);
+}
+
+form fieldset {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+form button {
+    display: inline-block;
+    width: max-content;
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    background-color: rgb(35, 45, 35);
+    color: rgb(245, 245, 235);
+    font-size: 1rem;
+    border: none;
+    font-family: soleil, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.0625em;
+}
 
 footer {
     padding: 1rem 0.5rem;
@@ -164,19 +263,27 @@ footer {
 
     nav li {
         display: inline-block;
-        margin-right: 2rem;
+        margin-right: 1rem;
     }
 
-    figcaption, h2, p {
+    figcaption,
+    h2,
+    p {
         margin-left: 0;
         margin-right: 0;
+    }
+
+    form {
+        padding: 0 0 2rem 0;
+        max-width: 35rem;    
     }
 }
 
 
 @media (min-width: 60em) {
 
-    div.home-container, div.container {
+    div.home-container,
+    div.container {
         display: grid;
         grid-template-columns: 3fr 1fr;
         padding: 0 1em;
@@ -191,7 +298,8 @@ footer {
         max-width: 60em;
     }
 
-    header, footer {
+    header,
+    footer {
         grid-column: 1/3;
     }
 
@@ -212,7 +320,7 @@ footer {
         margin-top: 0;
     }
 
-    section.main-story-teaser{
+    section.main-story-teaser {
         display: grid;
     }
 
@@ -224,10 +332,10 @@ footer {
     section.main-story-teaser a {
         display: flex;
         flex-direction: column;
-        flex: 1 0 ;
+        flex: 1 0;
     }
 
-    section.main-story-teaser figure{
+    section.main-story-teaser figure {
         display: flex;
         flex: 1 0 12em;
     }
@@ -246,7 +354,7 @@ footer {
     }
 
     .tertiary-story-teaser h2 {
-    border-top: solid 1px rgb(220, 150, 45);
+        border-top: solid 1px rgb(220, 150, 45);
     }
 
 }
