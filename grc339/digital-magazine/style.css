@@ -7,7 +7,95 @@
     box-sizing: border-box;
 }
 
-html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+:root {
+    --bg-color-body: rgb(245, 245, 235);
+    --color-accent: rgb(220, 150, 45);
+    --color-primary: rgb(35, 45, 35);
+    --color-secondary: rgb(65, 60, 55);
+    --color-tertiary: rgb(205, 200, 185);
+    --color-text-default: rgb(0, 0, 0);
+}
+
+html,
+body,
+div,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -16,7 +104,7 @@ html, body, div, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, 
 }
 
 body {
-    background-color: rgb(245, 245, 235);
+    background-color: var(--bg-color-body)
 }
 
 img {
@@ -63,11 +151,11 @@ nav li {
 nav a {
     font-family: soleil, sans-serif;
     font-weight: bold;
-    color: rgb(35, 45, 35);
+    color: var(--color-primary);
 }
 
 nav a:hover {
-    border-bottom: solid 2px rgb(220, 150, 45);
+    border-bottom: solid 2px var(--color-accent);
 
 }
 
@@ -76,7 +164,7 @@ nav a:hover {
 h2 {
     font-family: lust-text, serif;
     font-weight: 500;
-    color: rgb(35, 45, 35);
+    color: var(--color-primary);
     line-height: 1.1em;
     margin-top: 0.25rem;
     font-size: 1.5em;
@@ -85,6 +173,8 @@ h2 {
 
 p {
     font-family: soleil, sans-serif;
+    color: var(--color-text-default);
+
 }
 
 figcaption,
@@ -100,7 +190,7 @@ figcaption {
     font-style: italic;
     font-weight: 300;
     font-family: soleil, sans-serif;
-    color: rgb(65, 60, 55);
+    color: var(--color-secondary);
 }
 
 section p,
@@ -110,7 +200,7 @@ article p {
 }
 
 section a {
-    color: rgb(0, 0, 0);
+    color: var(--color-text-default)
 }
 
 /* Story Teasers and Articles */
@@ -141,12 +231,12 @@ aside .secondary-story-teaser h2 {
 
 .tertiary-story-teaser h2 {
     font-size: 1.25em;
-    border-top: solid 1px rgb(65, 60, 55);
+    border-top: solid 1px var(--color-secondary);
     padding-top: 0.5rem;
 }
 
 aside {
-    background-color: rgb(205, 200, 185);
+    background-color: var(--color-tertiary);
     padding: 1rem;
 }
 
@@ -201,7 +291,7 @@ form {
     flex-direction: column;
     padding: 0 1rem 2rem 1rem;
     font-family: soleil, sans-serif;
-    color: rgb(35, 45, 35);
+    color: var(--color-primary);
 }
 
 form label,
@@ -215,14 +305,16 @@ form select {
     padding: 0.5rem;
     border-radius: 0.5rem;
     margin-bottom: 0.5rem;
-    border: 1px solid rgb(35, 45, 35);
+    border: 1px solid var(--color-primary);
     font-family: inherit;
-    color: inherit;
+    background-color: var(--color-tertiary);
+    color: var(--color-text-default);
 }
+
 
 form input:focus,
 form select:focus {
-    border: 2px solid rgb(220, 150, 45);
+    border: 2px solid var(--color-accent);
 }
 
 form fieldset {
@@ -237,8 +329,8 @@ form button {
     width: max-content;
     padding: 0.5rem 0.75rem;
     border-radius: 0.5rem;
-    background-color: rgb(35, 45, 35);
-    color: rgb(245, 245, 235);
+    background-color: var(--color-primary);
+    color: var(--bg-color-body);
     font-size: 1rem;
     border: none;
     font-family: soleil, sans-serif;
@@ -248,8 +340,12 @@ form button {
 
 footer {
     padding: 1rem 0.5rem;
-    background-color: rgb(65, 60, 55);
-    color: rgb(205, 200, 185);
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+}
+
+footer p {
+    color: var(--color-tertiary);
 }
 
 @media (min-width: 40em) {
@@ -275,7 +371,7 @@ footer {
 
     form {
         padding: 0 0 2rem 0;
-        max-width: 35rem;    
+        max-width: 35rem;
     }
 }
 
@@ -354,7 +450,41 @@ footer {
     }
 
     .tertiary-story-teaser h2 {
-        border-top: solid 1px rgb(220, 150, 45);
+        border-top: solid 1px var(--color-accent);
     }
+
+}
+
+@media screen and (prefers-color-scheme: dark) {
+
+    /* :root {
+        --bg-color-body: rgb(245, 245, 235);
+        --color-accent: rgb(220, 150, 45);
+        --color-primary: rgb(35, 45, 35);
+        --color-secondary: rgb(65, 60, 55);
+        --color-tertiary: rgb(205, 200, 185);
+        --color-text-default: rgb(0, 0, 0) ;
+    } */
+
+    :root {
+        --bg-color-body: rgb(35, 45, 35);
+        --color-accent: rgb(185, 115, 10);
+        --color-primary: rgb(225, 225, 215);
+        --color-secondary: rgb(170, 165, 150);
+        --color-tertiary: rgb(65, 60, 55);
+        --color-text-default: rgb(215, 210, 195);
+    }
+
+    h1 {
+        background-image: url("First\ Roll\ Logo\ Alt.svg");
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    h1 img {
+        opacity: 0;
+    }
+
+
 
 }
